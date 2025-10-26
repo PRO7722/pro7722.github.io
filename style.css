@@ -1,0 +1,398 @@
+/* Базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position:relative;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Основной контент */
+main {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #6e8efb;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+h3 {
+    color: #a777e3;
+    margin: 15px 0 10px 0;
+}
+
+/* Секции */
+article {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 4px solid #a777e3;
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateX(5px);
+}
+
+/* Списки */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Изображения в статьях */
+article img {
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+article img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Разделительная линия */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #3c4359, transparent);
+    margin: 30px 0;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: #333;
+    color: white;
+    border-radius: 15px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    filter:grayscale(1);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.2);
+    filter:grayscale(0);
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 600px) {
+    #games li {
+        height: 130px;
+    }
+    
+    #games span {
+        padding: 12px 12px 12px 40px;
+        font-size: 0.9em;
+        min-height: 50px;
+    }
+    #games span:nth-child(2) {
+        font-size: 1.1em !important;
+        padding:15px !important;
+    }
+    
+    #games span:nth-child(3) {
+        font-size: 0.7em !important;
+    }
+    
+    #games span:nth-child(3)::before {
+        top: 20px !important;
+        width: 15px !important;
+        height: 15px !important;
+    }
+    form {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    form input[type="text"] {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+    
+    form button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+    
+    form label {
+        font-size: 1em;
+    }
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    main {
+        padding: 20px 15px;
+    }
+    
+    article {
+        padding: 15px;
+    }
+    
+    .social-links a {
+        margin: 0 5px;
+    }
+}
+
+#games ul {
+    list-style: none;
+    padding: 0;
+}
+
+#games li {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    filter: brightness(0.8)
+}
+
+#games li:hover {
+    transform: translateY(-5px);
+    filter: brightness(1);
+}
+
+#games img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Для красивого отображения текста */
+#games li {
+    height: 100px; /* Фиксированная высота карточек */
+    position: relative;
+    height: 150px; /* Увеличиваем высоту для двух строк текста */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#games ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+}
+
+#games li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+#games li:hover img {
+    transform: scale(1.05);
+}
+
+#games span {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 15px 15px 15px 50px; /* Добавляем отступ слева для иконки */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    min-height: 60px; /* Минимальная высота для двух строк */
+}
+
+#games li span:nth-child(2) {
+    top:50%;
+    font-size:1.5em;
+    transform: translateY(-50%);
+}
+
+#games li span:nth-child(3) {
+    top:70%;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+/* Иконка перед текстом */
+#games li span:nth-child(3):before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/6388/6388049.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 3;
+}
+
+/* Стили для формы */
+form {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #6e8efb;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background: white;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+    transform: translateY(-2px);
+}
+
+form input[type="text"]:hover {
+    border-color: #a777e3;
+}
+
+form button {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(110, 142, 251, 0.4);
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+form button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(110, 142, 251, 0.4);
+}
+
+/* Анимация при фокусе */
+form {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
